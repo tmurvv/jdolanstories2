@@ -2,14 +2,73 @@ body {
   background-color: #333333; }
 
 .hero {
-  position: relative; }
+  margin-left: 22.5%;
+  width: 55%; }
   .hero__image {
-    margin-left: 25%;
-    width: 50%; }
-  .hero__mainTitle {
-    font-family: tangerine;
-    font-size: 24px;
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    background-image: url("../img/herojdolanstories.jpg");
+    height: 100vh;
+    width: 105%;
+    position: relative;
+    background-size: cover; }
+    .hero__image--mainTitle {
+      font-family: tangerine;
+      font-style: italic;
+      font-size: 67px;
+      position: absolute;
+      top: 30%;
+      left: 40%; }
+    .hero__image--subTitle {
+      color: white;
+      font-family: oswald;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 24px;
+      position: absolute;
+      bottom: 25%;
+      right: 5%; }
+    .hero__image--threeImages {
+      display: flex;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 75px; }
+      .hero__image--threeImages-ronGuitar {
+        position: relative; }
+        .hero__image--threeImages-ronGuitar-text {
+          position: absolute;
+          bottom: 8px;
+          right: 9px; }
+          .hero__image--threeImages-ronGuitar-text > a > p {
+            color: yellow;
+            font-family: Oswald;
+            font-weight: 200;
+            font-style: italic;
+            font-size: 10px;
+            text-decoration: underline;
+            text-align: right; }
+      .hero__image--threeImages-train {
+        position: relative; }
+        .hero__image--threeImages-train-text {
+          position: absolute;
+          bottom: 8px;
+          left: 7px; }
+          .hero__image--threeImages-train-text > a > p {
+            color: yellow;
+            font-family: Oswald;
+            font-weight: 200;
+            font-style: italic;
+            font-size: 10px;
+            text-decoration: underline; }
+      .hero__image--threeImages-guitar {
+        position: relative; }
+        .hero__image--threeImages-guitar-text {
+          position: absolute;
+          bottom: 8px;
+          right: 9px; }
+          .hero__image--threeImages-guitar-text > a > p {
+            color: yellow;
+            font-family: Oswald;
+            font-weight: 200;
+            font-style: italic;
+            font-size: 10px;
+            text-decoration: underline; }

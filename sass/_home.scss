@@ -10,17 +10,92 @@ body {
 }
 
 .hero {
-    position: relative;
+    margin-left: 22.5%;
+    width: 55%;
     &__image {
-        margin-left: 25%;
-        width: 50%;       
+        background-image: url('../img/herojdolanstories.jpg');
+        height: 100vh;
+        width: 105%;
+        position: relative; 
+        background-size:cover;  
+        &--mainTitle {
+            font-family: tangerine;
+            font-style: italic;
+            font-size: 67px;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+        }
+        &--subTitle {
+            color: white;
+            font-family: oswald;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 24px;
+            position: absolute;
+            bottom: 25%;
+            right: 5%;
+        } 
+        &--threeImages {
+            display: flex;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 75px;
+
+            &-ronGuitar {
+                position: relative;
+                &-text {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 9px;
+
+                    &>a>p {
+                        color: yellow;
+                        font-family: Oswald;
+                        font-weight: 200;
+                        font-style: italic;
+                        font-size: 10px;
+                        text-decoration: underline;
+                        text-align: right;
+                    }              
+                }
+            }
+            &-train {
+                position: relative;
+                &-text {
+                    position: absolute;
+                    bottom: 8px;
+                    left: 7px;
+
+                    &>a>p {
+                        color: yellow;
+                        font-family: Oswald;
+                        font-weight: 200;
+                        font-style: italic;
+                        font-size: 10px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &-guitar {
+                position: relative;
+                &-text {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 9px;
+                    
+                    &>a>p {
+                        color: yellow;
+                        font-family: Oswald;
+                        font-weight: 200;
+                        font-style: italic;
+                        font-size: 10px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }  
     }
-    &__mainTitle {
-        font-family: tangerine;
-        font-style: italic;
-        font-size: 67px;
-        position: absolute;
-        top: 200px;
-        left: 50%;
-    }
+    
 }

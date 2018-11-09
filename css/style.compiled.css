@@ -162,59 +162,69 @@ body {
           font-size: 28px;
           text-decoration: underline; }
 
-.contact {
-  height: 100vh;
-  width: 100%;
-  background-image: url(../img/JDolanStories__guitarNeckStylish.jpg);
-  background-size: cover;
+.contact__image {
   position: relative;
-  padding: 5px; }
-  .contact__text {
-    position: absolute;
-    width: 350px;
-    top: 50%;
-    left: 30%;
-    font-size: 16px;
-    font-family: 'Josefin Slab', 'Vivaldi'; }
-  .contact__form {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 400px;
-    height: 70%;
-    border: 1px solid #333333;
-    border-radius: 7px; }
-    .contact__form--title {
-      background-color: #bbb;
-      padding: 5px 3px;
-      font-size: 12px; }
-    .contact__form--userInputs {
-      padding: 10px;
-      line-height: 2;
-      background-color: transparent; }
-      .contact__form--userInputs div {
-        width: 100%;
-        display: flex;
-        justify-content: stretch; }
-      .contact__form--userInputs label {
-        flex: 2;
-        text-align: right; }
-      .contact__form--userInputs input {
-        flex: 8;
-        margin: 3px; }
-      .contact__form--userInputs textarea {
-        width: 100%; }
-      .contact__form--userInputs input,
-      .contact__form--userInputs textarea {
-        border-radius: 7px;
-        font-size: 16px; }
-      .contact__form--userInputs button {
-        border-radius: 7px;
-        font-size: 16px; }
-  .contact__phone {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    width: 300px;
-    font-family: 'Josefin Slab', 'Vivaldi';
-    font-size: 24px; }
+  height: 576px;
+  width: 794px;
+  display: block;
+  margin: 0 auto; }
+  .contact__image > img {
+    height: 100%;
+    width: 100%; }
+
+.contact__text {
+  position: absolute;
+  width: 285px;
+  top: 264px;
+  left: 197px;
+  font-size: 16px;
+  font-family: 'Josefin Slab', serif; }
+
+.contact__form {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 267px;
+  height: 390px;
+  border: 1px solid #333333;
+  border-radius: 7px; }
+  .contact__form--title {
+    background-color: #ddd;
+    padding: 5px 3px;
+    font-size: 21px; }
+  .contact__form--userInputs {
+    padding: 10px;
+    padding-bottom: 20px;
+    line-height: 2;
+    background-color: transparent; }
+    .contact__form--userInputs div {
+      width: 100%;
+      display: flex;
+      justify-content: stretch; }
+    .contact__form--userInputs label {
+      flex: 2;
+      text-align: right;
+      margin-right: 3px; }
+    .contact__form--userInputs input {
+      flex: 8;
+      margin: 3px; }
+    .contact__form--userInputs textarea {
+      width: 100%; }
+    .contact__form--userInputs input,
+    .contact__form--userInputs textarea {
+      border-radius: 7px;
+      font-size: 16px; }
+    .contact__form--userInputs button {
+      border-radius: 7px;
+      font-size: 20px;
+      display: block;
+      margin: 0 auto;
+      padding: 3px 10px; }
+
+.contact__phone {
+  position: absolute;
+  bottom: 50px;
+  right: 15px;
+  font-family: 'Josefin Slab', serif;
+  font-size: 21px;
+  font-weight: 600; }

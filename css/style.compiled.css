@@ -32,6 +32,14 @@ body {
       right: 0;
       bottom: 0;
       height: 75px; }
+      .hero__image--threeImages-contactLink {
+        padding-top: 40px;
+        padding-right: 15px;
+        font-size: 20px;
+        font-family: Oswald;
+        color: #fff; }
+        .hero__image--threeImages-contactLink > a {
+          color: inherit; }
       .hero__image--threeImages-ronGuitar {
         position: relative; }
         .hero__image--threeImages-ronGuitar-text {
@@ -39,7 +47,7 @@ body {
           bottom: 8px;
           right: 9px; }
           .hero__image--threeImages-ronGuitar-text > a > p {
-            color: yellow;
+            color: #fff;
             font-family: Oswald;
             font-weight: 200;
             font-style: italic;
@@ -53,7 +61,7 @@ body {
           bottom: 8px;
           left: 7px; }
           .hero__image--threeImages-train-text > a > p {
-            color: yellow;
+            color: #fff;
             font-family: Oswald;
             font-weight: 200;
             font-style: italic;
@@ -66,9 +74,85 @@ body {
           bottom: 8px;
           right: 9px; }
           .hero__image--threeImages-guitar-text > a > p {
-            color: yellow;
+            color: #fff;
             font-family: Oswald;
             font-weight: 200;
             font-style: italic;
             font-size: 10px;
             text-decoration: underline; }
+
+.songLinks {
+  width: 100%; }
+  .songLinks img {
+    border-radius: 25px;
+    box-shadow: 0 0 12px #fff;
+    width: 100%; }
+  .songLinks__title {
+    font-family: tangerine;
+    font-style: italic;
+    font-size: 96px;
+    font-weight: 600;
+    color: #fff;
+    margin: auto;
+    text-align: center; }
+  .songLinks__images {
+    position: relative; }
+    .songLinks__images--ronGuitar {
+      position: relative;
+      left: 300px;
+      width: 400px; }
+      .songLinks__images--ronGuitar-text {
+        position: absolute;
+        bottom: -8px;
+        right: 9px; }
+        .songLinks__images--ronGuitar-text > a > p {
+          color: #fff;
+          font-family: Oswald;
+          font-weight: 600;
+          font-style: italic;
+          font-size: 28px;
+          text-decoration: underline; }
+    .songLinks__images--train {
+      position: relative;
+      width: 400px;
+      left: 720px;
+      top: -150px; }
+      .songLinks__images--train-text {
+        position: absolute;
+        bottom: -3px;
+        left: 9px; }
+        .songLinks__images--train-text > a > p {
+          color: #fff;
+          font-family: Oswald;
+          font-weight: 600;
+          font-style: italic;
+          font-size: 28px;
+          text-decoration: underline; }
+    .songLinks__images--contactText {
+      text-align: center; }
+      .songLinks__images--contactText > a {
+        color: #fff;
+        font-family: Oswald;
+        font-weight: 600;
+        font-size: 36px;
+        text-decoration: underline;
+        position: relative;
+        left: -250px;
+        top: -50px; }
+    .songLinks__images--guitar {
+      position: relative;
+      width: 400px;
+      left: 595px;
+      top: -240px; }
+      .songLinks__images--guitar-text {
+        position: absolute;
+        text-align: center;
+        bottom: -7px;
+        right: 25px; }
+        .songLinks__images--guitar-text > a > p {
+          color: #fff;
+          font-family: Oswald;
+          font-weight: 600;
+          font-style: italic;
+          font-size: 28px;
+          text-decoration: underline; }

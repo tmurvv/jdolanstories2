@@ -43,6 +43,18 @@ body {
             bottom: 0;
             height: 75px;
 
+            &-contactLink {
+                padding-top: 40px;
+                padding-right: 15px;
+                font-size: 20px;
+                font-family: Oswald;
+                color: #fff;
+
+                &>a {
+                    color: inherit;
+                }
+            }
+
             &-ronGuitar {
                 position: relative;
                 &-text {
@@ -51,7 +63,7 @@ body {
                     right: 9px;
 
                     &>a>p {
-                        color: yellow;
+                        color: #fff;
                         font-family: Oswald;
                         font-weight: 200;
                         font-style: italic;
@@ -69,7 +81,7 @@ body {
                     left: 7px;
 
                     &>a>p {
-                        color: yellow;
+                        color: #fff;
                         font-family: Oswald;
                         font-weight: 200;
                         font-style: italic;
@@ -86,7 +98,7 @@ body {
                     right: 9px;
                     
                     &>a>p {
-                        color: yellow;
+                        color: #fff;
                         font-family: Oswald;
                         font-weight: 200;
                         font-style: italic;
@@ -96,6 +108,104 @@ body {
                 }
             }
         }  
+    }  
+}
+
+.songLinks {
+    width: 100%;
+    & img {
+        border-radius: 25px;
+        box-shadow: 0 0 12px #fff;
+        width: 100%;
     }
-    
+    &__title {
+        font-family: tangerine;
+        font-style: italic;
+        font-size: 96px;
+        font-weight: 600;
+        color: #fff;
+        margin: auto;
+        text-align: center;
+    }
+
+    &__images {
+        position: relative;
+
+        &--ronGuitar {
+            position: relative;
+            left: 300px;
+            width: 400px;
+        
+            &-text {
+                position: absolute;
+                bottom: -8px;
+                right: 9px;
+                
+                &>a>p {
+                    color: #fff;
+                    font-family: Oswald;
+                    font-weight: 600;
+                    font-style: italic;
+                    font-size: 28px;
+                    text-decoration: underline;
+                }
+            }
+        }
+        &--train {
+            position: relative;
+            width: 400px;
+            left: 720px;
+            top: -150px;
+        
+            &-text {
+                position: absolute;
+                bottom: -3px;
+                left: 9px;
+                
+                &>a>p {
+                    color: #fff;
+                    font-family: Oswald;
+                    font-weight: 600;
+                    font-style: italic;
+                    font-size: 28px;
+                    text-decoration: underline;
+                }
+            }
+        }
+        &--contactText {
+            text-align:center;
+            &>a {
+                color: #fff;
+                font-family: Oswald;
+                font-weight: 600;
+                font-size: 36px;
+                text-decoration: underline;
+                position: relative;
+                left: -250px;
+                top: -50px;
+            }
+        }
+        &--guitar {
+            position: relative;
+            width: 400px;
+            left: 595px;
+            top: -240px;
+        
+            &-text {
+                position: absolute;
+                text-align: center;
+                bottom: -7px;
+                right: 25px;
+                
+                &>a>p {
+                    color: #fff;
+                    font-family: Oswald;
+                    font-weight: 600;
+                    font-style: italic;
+                    font-size: 28px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }

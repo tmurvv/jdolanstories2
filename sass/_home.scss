@@ -5,6 +5,12 @@
     transform: translate(-50%, -50%);
 }
 
+* { 
+    margin:0;
+    padding:0;
+    box-sizing:border-box; 
+}
+
 body {
     background-color: #333333;
 }
@@ -207,5 +213,79 @@ body {
                 }
             }
         }
+    }
+}
+
+.contact {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/JDolanStories__guitarNeckStylish.jpg);
+    background-size: cover;
+    position: relative;
+    padding: 5px;
+
+    &__text {
+        position: absolute;
+        width: 350px;
+        top: 50%;
+        left: 30%;
+        font-size: 16px;
+        font-family: 'Josefin Slab', 'Vivaldi';
+    }
+    &__form {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        width: 400px;
+        height: 70%;
+        border: 1px solid #333333;
+        border-radius: 7px;
+
+        &--title {
+            background-color: #bbb;
+            padding: 5px 3px;
+            font-size: 12px;
+        }
+        &--userInputs {           
+            padding: 10px;
+            line-height: 2;
+            background-color: transparent;
+
+            & div {
+                width: 100%;
+                display: flex;
+                justify-content: stretch;  
+            }
+            & label {
+                flex: 2;
+                text-align: right;
+                margin-right: 3px;
+            }
+            & input {
+                flex: 8;
+                margin: 3px;
+            }
+            & textarea {
+                width: 100%;
+            }
+            & input,
+            & textarea {
+                border-radius: 7px;
+                font-size: 16px;
+            }
+    
+            & button {
+                border-radius: 7px;
+                font-size: 16px;
+            }
+        }       
+    }
+    &__phone {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        width: 300px;
+        font-family: 'Josefin Slab', 'Vivaldi';
+        font-size: 24px;
     }
 }

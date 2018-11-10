@@ -23,7 +23,7 @@ body {
       top: 30%;
       left: 40%; }
     .hero__image--subTitle {
-      color: white;
+      color: #ecdbc1;
       font-family: oswald;
       font-style: italic;
       font-weight: 400;
@@ -42,7 +42,7 @@ body {
         padding-right: 15px;
         font-size: 20px;
         font-family: Oswald;
-        color: #fff; }
+        color: #ecdbc1; }
         .hero__image--threeImages-contactLink > a {
           color: inherit; }
       .hero__image--threeImages-ronGuitar {
@@ -52,7 +52,7 @@ body {
           bottom: 8px;
           right: 9px; }
           .hero__image--threeImages-ronGuitar-text > a > p {
-            color: #fff;
+            color: #ecdbc1;
             font-family: Oswald;
             font-weight: 200;
             font-style: italic;
@@ -66,7 +66,7 @@ body {
           bottom: 8px;
           left: 7px; }
           .hero__image--threeImages-train-text > a > p {
-            color: #fff;
+            color: #ecdbc1;
             font-family: Oswald;
             font-weight: 200;
             font-style: italic;
@@ -79,88 +79,91 @@ body {
           bottom: 8px;
           right: 9px; }
           .hero__image--threeImages-guitar-text > a > p {
-            color: #fff;
+            color: #ecdbc1;
             font-family: Oswald;
             font-weight: 200;
             font-style: italic;
             font-size: 10px;
             text-decoration: underline; }
 
-.songLinks {
+.songLinks img {
+  border-radius: 25px;
+  box-shadow: 0 0 12px #fff;
   width: 100%; }
-  .songLinks img {
-    border-radius: 25px;
-    box-shadow: 0 0 12px #fff;
-    width: 100%; }
-  .songLinks__title {
-    font-family: tangerine;
-    font-style: italic;
-    font-size: 96px;
-    font-weight: 600;
-    color: #fff;
-    margin: auto;
-    text-align: center; }
-  .songLinks__images {
-    position: relative; }
-    .songLinks__images--ronGuitar {
-      position: relative;
-      left: 300px;
-      width: 400px; }
-      .songLinks__images--ronGuitar-text {
-        position: absolute;
-        bottom: -8px;
-        right: 9px; }
-        .songLinks__images--ronGuitar-text > a > p {
-          color: #fff;
-          font-family: Oswald;
-          font-weight: 600;
-          font-style: italic;
-          font-size: 28px;
-          text-decoration: underline; }
-    .songLinks__images--train {
-      position: relative;
-      width: 400px;
-      left: 720px;
-      top: -150px; }
-      .songLinks__images--train-text {
-        position: absolute;
-        bottom: -3px;
-        left: 9px; }
-        .songLinks__images--train-text > a > p {
-          color: #fff;
-          font-family: Oswald;
-          font-weight: 600;
-          font-style: italic;
-          font-size: 28px;
-          text-decoration: underline; }
-    .songLinks__images--contactText {
-      text-align: center; }
-      .songLinks__images--contactText > a {
-        color: #fff;
+
+.songLinks__title {
+  font-family: tangerine;
+  font-style: italic;
+  font-size: 96px;
+  font-weight: 600;
+  color: #90c3d3;
+  margin: auto;
+  text-align: center; }
+
+.songLinks__images {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px; }
+  .songLinks__images--ronGuitar {
+    position: relative;
+    left: 140px;
+    top: -10px;
+    width: 400px; }
+    .songLinks__images--ronGuitar-text {
+      position: absolute;
+      bottom: 15px;
+      right: 10px; }
+      .songLinks__images--ronGuitar-text > a > p {
+        color: #ecdbc1;
         font-family: Oswald;
         font-weight: 600;
-        font-size: 36px;
-        text-decoration: underline;
-        position: relative;
-        left: -250px;
-        top: -50px; }
-    .songLinks__images--guitar {
+        font-style: italic;
+        font-size: 28px;
+        text-decoration: underline; }
+  .songLinks__images--train {
+    position: relative;
+    width: 400px;
+    left: 555px;
+    top: -150px; }
+    .songLinks__images--train-text {
+      position: absolute;
+      bottom: 20px;
+      left: 10px; }
+      .songLinks__images--train-text > a > p {
+        color: #ecdbc1;
+        font-family: Oswald;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 28px;
+        text-decoration: underline; }
+  .songLinks__images--contactText {
+    text-align: center; }
+    .songLinks__images--contactText > a {
+      color: #ecdbc1;
+      font-family: Oswald;
+      font-weight: 400;
+      font-size: 36px;
+      text-decoration: underline;
       position: relative;
-      width: 400px;
-      left: 595px;
-      top: -240px; }
-      .songLinks__images--guitar-text {
-        position: absolute;
-        text-align: center;
-        bottom: -7px;
-        right: 25px; }
-        .songLinks__images--guitar-text > a > p {
-          color: #fff;
-          font-family: Oswald;
-          font-weight: 600;
-          font-style: italic;
-          font-size: 28px;
-          text-decoration: underline; }
+      left: -190px;
+      top: -50px; }
+  .songLinks__images--guitar {
+    position: relative;
+    width: 400px;
+    left: 450px;
+    top: -247px; }
+    .songLinks__images--guitar-text {
+      position: absolute;
+      text-align: center;
+      bottom: 20px;
+      right: 25px; }
+      .songLinks__images--guitar-text > a > p {
+        color: #ecdbc1;
+        font-family: Oswald;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 28px;
+        text-decoration: underline; }
 
 .contact__image {
   position: relative;
@@ -191,7 +194,8 @@ body {
   .contact__form--title {
     background-color: #ddd;
     padding: 5px 3px;
-    font-size: 21px; }
+    font-size: 21px;
+    border-radius: 7px 7px 0 0; }
   .contact__form--userInputs {
     padding: 10px;
     padding-bottom: 20px;
@@ -207,7 +211,8 @@ body {
       margin-right: 3px; }
     .contact__form--userInputs input {
       flex: 8;
-      margin: 3px; }
+      margin: 3px;
+      padding: 2px; }
     .contact__form--userInputs textarea {
       width: 100%; }
     .contact__form--userInputs input,
@@ -228,3 +233,9 @@ body {
   font-family: 'Josefin Slab', serif;
   font-size: 21px;
   font-weight: 600; }
+
+.g-recaptcha {
+  transform: scale(0.81);
+  -webkit-transform: scale(0.81);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0; }

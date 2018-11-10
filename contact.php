@@ -1,46 +1,65 @@
 <?php
     include 'config.php';
-    if (isset($_POST['submit'])) {
-        $inputName = $_POST['name'];
-        $inputEmail = $_POST['email'];
-        $inputPhone = $_POST['phone'];
-        $inputMessage = $_POST['message'];
-
-        $mail_body = '<html>
-        <body style="font-family: Arial, Helvetica, sans-serif;
-                            line-height:1.8em;">
-        <p>Hello '.$siteEmailRecipient.', <br> A message was sent with the contact form on the J.Dolan Stories website with the following information:</p>
-        <p>Name: '.$inputName.'<br>
-        Email: '.$inputEmail.'<br>
-        Phone: '.$inputPhone.'<br>
-        Message: '.$inputMessage.'<br>
-        <br>
-        Have a nice day!<br>
-        J.Dolan Stories
-        </p>
-        </body>
-        </html>';
     
-        $subject = "Message from jdolanstories.com contact form";
-        $headers = "From: jdolanstories.com" . "\r\n";
-        $headers .= "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    if (isset($_POST['submit'])) {
+        $result = '';
+        $recaptchaArray = ['secret' => $recaptchaSecretKey,
+        'response' => $_POST['g-recaptcha-response']
+        ];
+
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($recaptchaArray));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $response = json_decode(curl_exec($curl));
+        curl_close($curl);
+       
+        var_dump
+        if (isset($response->success) && !$response->success == true) {
+            $result = 'ReCaptcha validation failed.';
+        }
+
+        if (isset($result) && !$result == 'ReCaptcha validation failed.') {
+            $inputName = $_POST['name'];
+            $inputEmail = $_POST['email'];
+            $inputPhone = $_POST['phone'];
+            $inputMessage = $_POST['message'];
+    
+            $mail_body = '<html>
+            <body style="font-family: Arial, Helvetica, sans-serif;
+                                line-height:1.8em;">
+            <p>Hello '.$siteEmailRecipient.', <br> A message was sent with the contact form on the J.Dolan Stories website with the following information:</p>
+            <p>Name: '.$inputName.'<br>
+            Email: '.$inputEmail.'<br>
+            Phone: '.$inputPhone.'<br>
+            Message: '.$inputMessage.'<br>
+            <br>
+            Have a nice day!<br>
+            J.Dolan Stories
+            </p>
+            </body>
+            </html>';
         
-        //Error Handling for PHPMailer
-        if(!mail($email, $subject, $mail_body, $headers)){
-            $result = "Email failed to send.";
+            $subject = "Message from jdolanstories.com contact form";
+            $headers = "From: jdolanstories.com" . "\r\n";
+            $headers .= "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            
+            //Error Handling for PHPMailer
+            if(!mail($email, $subject, $mail_body, $headers)){
+                $result = "Email failed to send.";
+            }
+            else{
+                $result = "Email sent!";
+            }
         }
-        else{
-            $result = "Email sent!";
-        }
+        
     }
 ?>
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -48,21 +67,10 @@
     <link href="https://fonts.googleapis.com/css?family=Tangerine:100,300,300i,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:100,300,300i,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
-    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js\jquery.waypoints.min.js"></script>
-    <script type="text/javascript" src="js\script.js"></script> -->
-
     <title>J--Dolan-Stories-Contact</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-    function onSubmit(token) {
-        document.getElementById("recaptchaForm").submit();
-    }
-    </script>
-
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <div class="contact">
@@ -91,12 +99,9 @@
                             <input type="text" name='phone' placeholder='optional'><br>
                         </div>
                         <label for="message">Message:</label>
-                        <textarea rows="5" name="message"></textarea><br>
-                        <!-- NOT YET IMPLEMENTED ADD reCaptcha -->
-                        <br>
-                        <br>
+                        <textarea rows="4" name="message"></textarea><br>
+                        <div class="g-recaptcha" data-sitekey="6Lf1y3kUAAAAACBVkJy0qvEDExyorBtUyurg4yga"></div>
                         <button type='submit' name='submit'>Submit</button>
-                        <!-- <button class="g-recapcha" data-sitekey="6LehxnkUAAAAAGiCqV1QGyupkGG6bufS3xi7aB5S" data-callback='onSubmit'>Submit</button>                         -->
                     </div>
                 </form>
             </div>        

@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: #333333;
+    background-color: #000;
 }
 
 .hero {
@@ -33,7 +33,7 @@ body {
             left: 40%;
         }
         &--subTitle {
-            color: white;
+            color: #ecdbc1;
             font-family: oswald;
             font-style: italic;
             font-weight: 400;
@@ -54,7 +54,7 @@ body {
                 padding-right: 15px;
                 font-size: 20px;
                 font-family: Oswald;
-                color: #fff;
+                color: #ecdbc1;
 
                 &>a {
                     color: inherit;
@@ -69,7 +69,7 @@ body {
                     right: 9px;
 
                     &>a>p {
-                        color: #fff;
+                        color: #ecdbc1;
                         font-family: Oswald;
                         font-weight: 200;
                         font-style: italic;
@@ -87,7 +87,7 @@ body {
                     left: 7px;
 
                     &>a>p {
-                        color: #fff;
+                        color: #ecdbc1;
                         font-family: Oswald;
                         font-weight: 200;
                         font-style: italic;
@@ -104,7 +104,7 @@ body {
                     right: 9px;
                     
                     &>a>p {
-                        color: #fff;
+                        color: #ecdbc1;
                         font-family: Oswald;
                         font-weight: 200;
                         font-style: italic;
@@ -118,7 +118,7 @@ body {
 }
 
 .songLinks {
-    width: 100%;
+
     & img {
         border-radius: 25px;
         box-shadow: 0 0 12px #fff;
@@ -129,26 +129,29 @@ body {
         font-style: italic;
         font-size: 96px;
         font-weight: 600;
-        color: #fff;
+        color: #90c3d3;
         margin: auto;
         text-align: center;
     }
 
     &__images {
         position: relative;
+        margin: 0 auto;
+        width: 1000px;
 
         &--ronGuitar {
             position: relative;
-            left: 300px;
+            left: 140px;
+            top: -10px;
             width: 400px;
         
             &-text {
                 position: absolute;
-                bottom: -8px;
-                right: 9px;
+                bottom: 15px;
+                right: 10px;
                 
                 &>a>p {
-                    color: #fff;
+                    color: #ecdbc1;
                     font-family: Oswald;
                     font-weight: 600;
                     font-style: italic;
@@ -160,16 +163,16 @@ body {
         &--train {
             position: relative;
             width: 400px;
-            left: 720px;
+            left: 555px;
             top: -150px;
         
             &-text {
                 position: absolute;
-                bottom: -3px;
-                left: 9px;
+                bottom: 20px;
+                left: 10px;
                 
                 &>a>p {
-                    color: #fff;
+                    color: #ecdbc1;
                     font-family: Oswald;
                     font-weight: 600;
                     font-style: italic;
@@ -181,30 +184,30 @@ body {
         &--contactText {
             text-align:center;
             &>a {
-                color: #fff;
+                color: #ecdbc1;
                 font-family: Oswald;
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 36px;
                 text-decoration: underline;
                 position: relative;
-                left: -250px;
+                left: -190px;
                 top: -50px;
             }
         }
         &--guitar {
             position: relative;
             width: 400px;
-            left: 595px;
-            top: -240px;
+            left: 450px;
+            top: -247px;
         
             &-text {
                 position: absolute;
                 text-align: center;
-                bottom: -7px;
+                bottom: 20px;
                 right: 25px;
                 
                 &>a>p {
-                    color: #fff;
+                    color: #ecdbc1;
                     font-family: Oswald;
                     font-weight: 600;
                     font-style: italic;
@@ -217,7 +220,7 @@ body {
 }
 
 .contact {
-   
+    
     &__image {
         position: relative;
         height: 576px;
@@ -273,6 +276,7 @@ body {
             & input {
                 flex: 8;
                 margin: 3px;
+                padding: 2px;
             }
             & textarea {
                 width: 100%;
@@ -288,7 +292,6 @@ body {
                 display: block;
                 margin: 0 auto;
                 padding: 3px 10px;
-
             }
         }       
     }
@@ -300,4 +303,12 @@ body {
         font-size: 21px;
         font-weight: 600;
     }
+}
+
+//reCaptcha
+.g-recaptcha {
+    transform:scale(0.81);
+    -webkit-transform:scale(0.81);  
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
 }

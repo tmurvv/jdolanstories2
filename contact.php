@@ -14,8 +14,7 @@
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         $response = json_decode(curl_exec($curl));
         curl_close($curl);
-       
-        var_dump
+      
         if (isset($response->success) && !$response->success == true) {
             $result = 'ReCaptcha validation failed.';
         }
@@ -29,7 +28,7 @@
             $mail_body = '<html>
             <body style="font-family: Arial, Helvetica, sans-serif;
                                 line-height:1.8em;">
-            <p>Hello '.$siteEmailRecipient.', <br> A message was sent with the contact form on the J.Dolan Stories website with the following information:</p>
+            <p>Hello '.$siteEmailRecipient.', <br> A message with the following information was sent via the contact form on the J.Dolan Stories website:</p>
             <p>Name: '.$inputName.'<br>
             Email: '.$inputEmail.'<br>
             Phone: '.$inputPhone.'<br>
@@ -53,8 +52,7 @@
             else{
                 $result = "Email sent!";
             }
-        }
-        
+        }       
     }
 ?>
 <!DOCTYPE html>

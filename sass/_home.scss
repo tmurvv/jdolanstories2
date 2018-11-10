@@ -16,14 +16,18 @@ body {
 }
 
 .hero {
-    margin-left: 22.5%;
-    width: 55%;
+    
     &__image {
-        background-image: url('../img/herojdolanstories.jpg');
-        height: 100vh;
-        width: 105%;
-        position: relative; 
-        background-size:cover;  
+        position: relative;
+        height: 661px;
+        width: 796px;
+        display: block;
+        margin: 0 auto;
+
+        &>img {
+           height: 100%;
+           width: 100%; 
+        }
         &--mainTitle {
             font-family: tangerine;
             font-style: italic;
@@ -33,14 +37,14 @@ body {
             left: 40%;
         }
         &--subTitle {
-            color: #ecdbc1;
+            color: #fff;
             font-family: oswald;
             font-style: italic;
-            font-weight: 400;
-            font-size: 24px;
+            font-weight: 600;
+            font-size: 18px;
             position: absolute;
-            bottom: 25%;
-            right: 5%;
+            bottom: 165px;
+            right: 18px;
         } 
         &--threeImages {
             display: flex;
@@ -50,8 +54,8 @@ body {
             height: 75px;
 
             &-contactLink {
-                padding-top: 40px;
-                padding-right: 15px;
+                padding-top: 41px;
+                padding-right: 100px;
                 font-size: 20px;
                 font-family: Oswald;
                 color: #ecdbc1;
@@ -65,15 +69,15 @@ body {
                 position: relative;
                 &-text {
                     position: absolute;
-                    bottom: 8px;
-                    right: 9px;
+                    bottom: 20px;
+                    right: 5px;
 
                     &>a>p {
                         color: #ecdbc1;
                         font-family: Oswald;
-                        font-weight: 200;
+                        font-weight: 600;
                         font-style: italic;
-                        font-size: 10px;
+                        font-size: 12px;
                         text-decoration: underline;
                         text-align: right;
                     }              
@@ -83,15 +87,15 @@ body {
                 position: relative;
                 &-text {
                     position: absolute;
-                    bottom: 8px;
+                    bottom: 20px;
                     left: 7px;
 
                     &>a>p {
                         color: #ecdbc1;
                         font-family: Oswald;
-                        font-weight: 200;
+                        font-weight: 600;
                         font-style: italic;
-                        font-size: 10px;
+                        font-size: 12px;
                         text-decoration: underline;
                     }
                 }
@@ -100,15 +104,15 @@ body {
                 position: relative;
                 &-text {
                     position: absolute;
-                    bottom: 8px;
-                    right: 9px;
+                    bottom: 20px;
+                    right: 5px;
                     
                     &>a>p {
                         color: #ecdbc1;
                         font-family: Oswald;
-                        font-weight: 200;
+                        font-weight: 600;
                         font-style: italic;
-                        font-size: 10px;
+                        font-size: 12px;
                         text-decoration: underline;
                     }
                 }
@@ -164,7 +168,7 @@ body {
             position: relative;
             width: 400px;
             left: 555px;
-            top: -150px;
+            top: -190px;
         
             &-text {
                 position: absolute;
@@ -191,14 +195,14 @@ body {
                 text-decoration: underline;
                 position: relative;
                 left: -190px;
-                top: -50px;
+                top: -100px;
             }
         }
         &--guitar {
             position: relative;
             width: 400px;
             left: 450px;
-            top: -247px;
+            top: -285px;
         
             &-text {
                 position: absolute;

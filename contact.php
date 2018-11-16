@@ -98,7 +98,7 @@
                         </div>
                         <label for="message">Message:</label>
                         <textarea rows="4" name="message"></textarea><br>
-                        <div class="g-recaptcha" data-sitekey="6Lf1y3kUAAAAACBVkJy0qvEDExyorBtUyurg4yga"></div>
+                        <div class="g-recaptcha" data-sitekey="6LcrP3sUAAAAACZXFfHU362MVFkMvhuTo83bRnNr"></div>
                         <button type='submit' name='submit'>Submit</button>
                     </div>
                 </form>

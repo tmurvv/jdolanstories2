@@ -1,6 +1,10 @@
 <?php
-    $email = 'lmurv@hotmail.com, tmurv@shaw.ca';
+
+    //email info for contact form
+    $email = 'lmurv@hotmail.com';
     $siteEmailRecipient = "Ron";
-    $recaptchaKey = '6Lf1y3kUAAAAACBVkJy0qvEDExyorBtUyurg4yga';
-    $recaptchaSecretKey = '6Lf1y3kUAAAAAEM68q6gKAzBiLnnriOWcrgBpxMq';
+
+    //reCaptcha info for contact form
+    $recaptchaKey = '6LcrP3sUAAAAACZXFfHU362MVFkMvhuTo83bRnNr';
+    $recaptchaSecretKey = '6LcrP3sUAAAAAPTW-3NduUAYmmvWtK5h9-vDEguE';
 ?>

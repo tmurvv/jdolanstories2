@@ -1,8 +1,28 @@
+//Center object vert and hort
 @mixin centerBoxAbs {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+//responsive formatting
+@mixin respond($breakpoint) {  //1em=16px, formula (max or min-screen width) / 16px = ??ems
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content }; //600px  600px/16px (1em) = 37.5em
+    }
+    @if $breakpoint == portrait {
+        @media only screen and (max-width: 56.25em) { @content }; //900px   900px/16px (1em) = 56.25em
+    }
+    @if $breakpoint == portraitPlus {
+        @media only screen and (max-width: 65.625em) { @content }; //1050px   1050px/16px (1em) = 65.625em
+    }
+    @if $breakpoint == landscape {
+        @media only screen and (max-width: 75em) { @content }; //1200px   1200px/16px (1em) = 75.5em
+    }
+    @if $breakpoint == bigScreen {
+        @media only screen and (min-width: 112.5em) { @content }; //1800+px     1800px/16px (1em) = 112.5em
+    }
 }
 
 * { 
@@ -143,11 +163,19 @@ body {
         margin: 0 auto;
         width: 1000px;
 
+        @include respond(portraitPlus) {
+            width: 900px;
+        }
+
         &--ronGuitar {
             position: relative;
             left: 140px;
             top: -10px;
             width: 400px;
+
+            @include respond(portraitPlus) {
+                left: 50px;
+            }
         
             &-text {
                 position: absolute;
@@ -170,6 +198,10 @@ body {
             left: 555px;
             top: -190px;
         
+            @include respond(portraitPlus) {
+                left: 465px;
+            }
+
             &-text {
                 position: absolute;
                 bottom: 20px;
@@ -196,6 +228,10 @@ body {
                 position: relative;
                 left: -190px;
                 top: -100px;
+
+                @include respond(portraitPlus) {
+                    left: -240px;
+                }
             }
         }
         &--guitar {
@@ -203,6 +239,10 @@ body {
             width: 400px;
             left: 450px;
             top: -285px;
+
+            @include respond(portraitPlus) {
+                left: 355px;
+            }
         
             &-text {
                 position: absolute;
@@ -316,3 +356,4 @@ body {
     transform-origin:0 0;
     -webkit-transform-origin:0 0;
 }
+

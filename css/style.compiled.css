@@ -104,11 +104,17 @@ body {
   position: relative;
   margin: 0 auto;
   width: 1000px; }
+  @media only screen and (max-width: 65.625em) {
+    .songLinks__images {
+      width: 900px; } }
   .songLinks__images--ronGuitar {
     position: relative;
     left: 140px;
     top: -10px;
     width: 400px; }
+    @media only screen and (max-width: 65.625em) {
+      .songLinks__images--ronGuitar {
+        left: 50px; } }
     .songLinks__images--ronGuitar-text {
       position: absolute;
       bottom: 15px;
@@ -125,6 +131,9 @@ body {
     width: 400px;
     left: 555px;
     top: -190px; }
+    @media only screen and (max-width: 65.625em) {
+      .songLinks__images--train {
+        left: 465px; } }
     .songLinks__images--train-text {
       position: absolute;
       bottom: 20px;
@@ -147,11 +156,17 @@ body {
       position: relative;
       left: -190px;
       top: -100px; }
+      @media only screen and (max-width: 65.625em) {
+        .songLinks__images--contactText > a {
+          left: -240px; } }
   .songLinks__images--guitar {
     position: relative;
     width: 400px;
     left: 450px;
     top: -285px; }
+    @media only screen and (max-width: 65.625em) {
+      .songLinks__images--guitar {
+        left: 355px; } }
     .songLinks__images--guitar-text {
       position: absolute;
       text-align: center;

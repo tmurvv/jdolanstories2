@@ -1,7 +1,7 @@
 {
-  "name": "Take2TechSiteSass",
+  "name": "jdolanstories",
   "version": "1.0.0",
-  "description": "Take2Tech site with Sass for Visual Studio Code",
+  "description": "jdolanstories site with Sass for Visual Studio Code",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",

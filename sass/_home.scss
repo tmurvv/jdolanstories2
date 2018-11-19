@@ -6,12 +6,15 @@
     transform: translate(-50%, -50%);
 }
 
-//responsive formatting
+//responsive formatting -- added after-the-fact so sizes are unusual
 @mixin respond($breakpoint) {  //1em=16px, formula (max or min-screen width) / 16px = ??ems
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content }; //600px  600px/16px (1em) = 37.5em
     }
     @if $breakpoint == portrait {
+        @media only screen and (max-width: 50em) { @content }; //800px   800px/16px (1em) = 50em
+    }
+    @if $breakpoint == portrait900 {
         @media only screen and (max-width: 56.25em) { @content }; //900px   900px/16px (1em) = 56.25em
     }
     @if $breakpoint == portraitPlus {
@@ -55,6 +58,14 @@ body {
             position: absolute;
             top: 30%;
             left: 40%;
+
+            @include respond(portrait900) {
+                left: 32%;
+            }
+            @include respond(portrait) {
+                left: 22.5%;
+            }
+            
         }
         &--subTitle {
             color: #fff;
@@ -65,6 +76,14 @@ body {
             position: absolute;
             bottom: 165px;
             right: 18px;
+            @include respond(portrait900) {
+                right: 18%;
+            }
+            @include respond(portrait) {
+                font-size: 28px;
+                right: 27.5%
+            }
+            
         } 
         &--threeImages {
             display: flex;
@@ -73,6 +92,14 @@ body {
             bottom: 0;
             height: 75px;
 
+            @include respond(portrait900) {
+                right: 18%;
+            }
+            @include respond(portrait) {
+                bottom: 10px;
+                right: 27.5%;
+            }
+            
             &-contactLink {
                 padding-top: 41px;
                 padding-right: 100px;
@@ -80,6 +107,9 @@ body {
                 font-family: Oswald;
                 color: #ecdbc1;
 
+                @include respond(portrait) {
+                    padding-right: 15px;
+                }
                 &>a {
                     color: inherit;
                 }
@@ -166,6 +196,9 @@ body {
         @include respond(portraitPlus) {
             width: 900px;
         }
+        @include respond(portrait900) {
+            width: 600px;
+        }
 
         &--ronGuitar {
             position: relative;
@@ -175,6 +208,11 @@ body {
 
             @include respond(portraitPlus) {
                 left: 50px;
+            }
+            @include respond(portrait900) {
+                top:auto;
+                left:auto;
+                margin: 40px auto;
             }
         
             &-text {
@@ -200,6 +238,11 @@ body {
         
             @include respond(portraitPlus) {
                 left: 465px;
+            }
+            @include respond(portrait900) {
+                top:auto;
+                left:auto;
+                margin: 40px auto;
             }
 
             &-text {
@@ -232,6 +275,11 @@ body {
                 @include respond(portraitPlus) {
                     left: -240px;
                 }
+                @include respond(portrait900) {
+                    top:auto;
+                    left:auto;
+                    font-size: 24px;
+                }
             }
         }
         &--guitar {
@@ -242,6 +290,11 @@ body {
 
             @include respond(portraitPlus) {
                 left: 355px;
+            }
+            @include respond(portrait900) {
+                top:auto;
+                left:auto;
+                margin: 40px auto;
             }
         
             &-text {
@@ -261,6 +314,24 @@ body {
             }
         }
     }
+}
+
+#mobileContact {
+    display: none;
+
+    @include respond(portrait900) {
+        display: block;
+        margin: 0 40px 40px;
+    }
+
+}
+#nonMobileContact {
+    display: block;
+
+    @include respond(portrait900) {
+        display: none;      
+    }
+
 }
 
 .contact {

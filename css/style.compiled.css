@@ -6,12 +6,24 @@
 body {
   background-color: #000; }
 
+@media only screen and (max-width: 56.25em) {
+  #hardImage {
+    display: none; } }
+
 .hero__image {
   position: relative;
   height: 661px;
   width: 796px;
   display: block;
   margin: 0 auto; }
+  @media only screen and (max-width: 56.25em) {
+    .hero__image {
+      background-image: url("../img/herojdolanstories.jpg");
+      background-size: cover;
+      width: 100%; } }
+  @media only screen and (max-width: 37.5em) {
+    .hero__image {
+      background-image: url("../img/herojdolanstoriesPhone.jpg"); } }
   .hero__image > img {
     height: 100%;
     width: 100%; }
@@ -22,12 +34,10 @@ body {
     position: absolute;
     top: 30%;
     left: 40%; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 37.5em) {
       .hero__image--mainTitle {
-        left: 32%; } }
-    @media only screen and (max-width: 50em) {
-      .hero__image--mainTitle {
-        left: 22.5%; } }
+        top: 13%;
+        left: 11%; } }
   .hero__image--subTitle {
     color: #fff;
     font-family: oswald;
@@ -37,36 +47,35 @@ body {
     position: absolute;
     bottom: 165px;
     right: 18px; }
-    @media only screen and (max-width: 56.25em) {
-      .hero__image--subTitle {
-        right: 18%; } }
-    @media only screen and (max-width: 50em) {
-      .hero__image--subTitle {
-        font-size: 28px;
-        right: 27.5%; } }
   .hero__image--threeImages {
     display: flex;
     position: absolute;
     right: 0;
     bottom: 0;
     height: 75px; }
-    @media only screen and (max-width: 56.25em) {
-      .hero__image--threeImages {
-        right: 18%; } }
-    @media only screen and (max-width: 50em) {
-      .hero__image--threeImages {
-        bottom: 10px;
-        right: 27.5%; } }
     .hero__image--threeImages-contactLink {
       padding-top: 41px;
       padding-right: 100px;
-      font-size: 20px;
+      font-size: 19px;
       font-family: Oswald;
       color: #ecdbc1; }
-      @media only screen and (max-width: 50em) {
+      @media only screen and (max-width: 37.5em) {
         .hero__image--threeImages-contactLink {
-          padding-right: 15px; } }
+          display: none; } }
       .hero__image--threeImages-contactLink > a {
+        color: inherit; }
+    .hero__image--threeImages-contactLinkMobile {
+      display: none;
+      font-size: 19px;
+      font-family: Oswald;
+      color: #ecdbc1; }
+      @media only screen and (max-width: 37.5em) {
+        .hero__image--threeImages-contactLinkMobile {
+          display: block;
+          position: absolute;
+          right: 18px;
+          bottom: 100px; } }
+      .hero__image--threeImages-contactLinkMobile > a {
         color: inherit; }
     .hero__image--threeImages-ronGuitar {
       position: relative; }

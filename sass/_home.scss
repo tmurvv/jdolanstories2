@@ -38,6 +38,11 @@ body {
     background-color: #000;
 }
 
+#hardImage {
+    @include respond(portrait900) {
+        display: none
+    }
+}
 .hero {
     
     &__image {
@@ -46,6 +51,15 @@ body {
         width: 796px;
         display: block;
         margin: 0 auto;
+
+        @include respond(portrait900) {
+            background-image: url('../img/herojdolanstories.jpg');
+            background-size: cover;
+            width: 100%;
+        }
+        @include respond(phone) {
+            background-image: url('../img/herojdolanstoriesPhone.jpg');
+        }
 
         &>img {
            height: 100%;
@@ -59,11 +73,9 @@ body {
             top: 30%;
             left: 40%;
 
-            @include respond(portrait900) {
-                left: 32%;
-            }
-            @include respond(portrait) {
-                left: 22.5%;
+            @include respond(phone) {
+                top: 13%;
+                left: 11%;
             }
             
         }
@@ -76,13 +88,6 @@ body {
             position: absolute;
             bottom: 165px;
             right: 18px;
-            @include respond(portrait900) {
-                right: 18%;
-            }
-            @include respond(portrait) {
-                font-size: 28px;
-                right: 27.5%
-            }
             
         } 
         &--threeImages {
@@ -91,25 +96,35 @@ body {
             right: 0;
             bottom: 0;
             height: 75px;
-
-            @include respond(portrait900) {
-                right: 18%;
-            }
-            @include respond(portrait) {
-                bottom: 10px;
-                right: 27.5%;
-            }
             
             &-contactLink {
                 padding-top: 41px;
                 padding-right: 100px;
-                font-size: 20px;
+                font-size: 19px;
                 font-family: Oswald;
                 color: #ecdbc1;
-
-                @include respond(portrait) {
-                    padding-right: 15px;
+                @include respond(phone) {
+                    display: none;
                 }
+
+                &>a {
+                    color: inherit;
+                }
+            }
+
+            &-contactLinkMobile {
+                
+                display: none;
+                font-size: 19px;
+                font-family: Oswald;
+                color: #ecdbc1;
+                @include respond(phone) {
+                    display: block;
+                    position: absolute;
+                    right: 18px;
+                    bottom: 100px;
+                }
+
                 &>a {
                     color: inherit;
                 }

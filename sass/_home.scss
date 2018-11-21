@@ -38,7 +38,7 @@ body {
     background-color: #000;
 }
 
-#hardImage {
+.hardImage {
     @include respond(portrait900) {
         display: none
     }
@@ -56,9 +56,12 @@ body {
             background-image: url('../img/herojdolanstories.jpg');
             background-size: cover;
             width: 100%;
+            background-position: bottom left;
         }
         @include respond(phone) {
             background-image: url('../img/herojdolanstoriesPhone.jpg');
+            background-size: cover;
+            background-position: bottom left;
         }
 
         &>img {
@@ -213,7 +216,7 @@ body {
     & img {
         border-radius: 25px;
         @include respond(phone) {
-            border-radius: 3px;
+            border-radius: 15px;
         }
         box-shadow: 0 0 12px #fff;
         width: 100%;
@@ -407,6 +410,19 @@ body {
         display: block;
         margin: 0 auto;
 
+        @include respond(portrait900) {
+            width: 100%;
+            background-image: linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(../img/JDolanStories__guitarNeckStylish.jpg);   
+            background-size: cover;           
+        }
+        @include respond(phone) {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient( rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url(../img/JDolanStories__guitarNeckStylish.jpg);   
+            background-size: cover;           
+        }
+        
+
         &>img {
            height: 100%;
            width: 100%; 
@@ -420,6 +436,16 @@ body {
         left: 197px;
         font-size: 16px;
         font-family: 'Josefin Slab', serif;
+        @include respond(portrait900) {
+            top: 13%;
+            left: 10%;
+            width: 80%;
+        }
+        @include respond(phone) {
+            position: static;
+            margin: auto;
+            padding-top: 50px;
+        }
     }
     &__form {
         position: absolute;
@@ -429,6 +455,11 @@ body {
         height: 390px;
         border: 1px solid #333333;
         border-radius: 7px;
+
+        @include respond(phone) {
+            position: static;
+            margin: 50px auto;
+        }
 
         &--title {
             background-color: #ddd;
@@ -481,7 +512,14 @@ body {
         font-family: 'Josefin Slab', serif;
         font-size: 21px;
         font-weight: 600;
+
+        @include respond(phone) {
+            position: static;
+            margin: 50px 20%;
+            text-align: center;        
+        }
     }
+    
 }
 
 //reCaptcha

@@ -7,7 +7,7 @@ body {
   background-color: #000; }
 
 @media only screen and (max-width: 56.25em) {
-  #hardImage {
+  .hardImage {
     display: none; } }
 
 .hero__image {
@@ -20,10 +20,13 @@ body {
     .hero__image {
       background-image: url("../img/herojdolanstories.jpg");
       background-size: cover;
-      width: 100%; } }
+      width: 100%;
+      background-position: bottom left; } }
   @media only screen and (max-width: 37.5em) {
     .hero__image {
-      background-image: url("../img/herojdolanstoriesPhone.jpg"); } }
+      background-image: url("../img/herojdolanstoriesPhone.jpg");
+      background-size: cover;
+      background-position: bottom left; } }
   .hero__image > img {
     height: 100%;
     width: 100%; }
@@ -143,7 +146,7 @@ body {
   width: 100%; }
   @media only screen and (max-width: 37.5em) {
     .songLinks img {
-      border-radius: 3px; } }
+      border-radius: 15px; } }
 
 .songLinks__title {
   font-family: tangerine;
@@ -299,6 +302,17 @@ body {
   width: 794px;
   display: block;
   margin: 0 auto; }
+  @media only screen and (max-width: 56.25em) {
+    .contact__image {
+      width: 100%;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/JDolanStories__guitarNeckStylish.jpg);
+      background-size: cover; } }
+  @media only screen and (max-width: 37.5em) {
+    .contact__image {
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/JDolanStories__guitarNeckStylish.jpg);
+      background-size: cover; } }
   .contact__image > img {
     height: 100%;
     width: 100%; }
@@ -310,6 +324,16 @@ body {
   left: 197px;
   font-size: 16px;
   font-family: 'Josefin Slab', serif; }
+  @media only screen and (max-width: 56.25em) {
+    .contact__text {
+      top: 13%;
+      left: 10%;
+      width: 80%; } }
+  @media only screen and (max-width: 37.5em) {
+    .contact__text {
+      position: static;
+      margin: auto;
+      padding-top: 50px; } }
 
 .contact__form {
   position: absolute;
@@ -319,6 +343,10 @@ body {
   height: 390px;
   border: 1px solid #333333;
   border-radius: 7px; }
+  @media only screen and (max-width: 37.5em) {
+    .contact__form {
+      position: static;
+      margin: 50px auto; } }
   .contact__form--title {
     background-color: #ddd;
     padding: 5px 3px;
@@ -361,6 +389,11 @@ body {
   font-family: 'Josefin Slab', serif;
   font-size: 21px;
   font-weight: 600; }
+  @media only screen and (max-width: 37.5em) {
+    .contact__phone {
+      position: static;
+      margin: 50px 20%;
+      text-align: center; } }
 
 .g-recaptcha {
   transform: scale(0.81);

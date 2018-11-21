@@ -36,7 +36,7 @@ body {
     left: 40%; }
     @media only screen and (max-width: 37.5em) {
       .hero__image--mainTitle {
-        top: 13%;
+        top: 25%;
         left: 11%; } }
   .hero__image--subTitle {
     color: #fff;
@@ -47,12 +47,20 @@ body {
     position: absolute;
     bottom: 165px;
     right: 18px; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__image--subTitle {
+        bottom: 227px;
+        right: 13px;
+        font-size: 22px; } }
   .hero__image--threeImages {
     display: flex;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 124px;
     height: 75px; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__image--threeImages {
+        display: block; } }
     .hero__image--threeImages-contactLink {
       padding-top: 41px;
       padding-right: 100px;
@@ -73,8 +81,9 @@ body {
         .hero__image--threeImages-contactLinkMobile {
           display: block;
           position: absolute;
-          right: 18px;
-          bottom: 100px; } }
+          right: 125px;
+          bottom: 8px;
+          font-size: 16px; } }
       .hero__image--threeImages-contactLinkMobile > a {
         color: inherit; }
     .hero__image--threeImages-ronGuitar {
@@ -83,6 +92,10 @@ body {
         position: absolute;
         bottom: 20px;
         right: 5px; }
+        @media only screen and (max-width: 37.5em) {
+          .hero__image--threeImages-ronGuitar-text {
+            bottom: 6px;
+            right: 15px; } }
         .hero__image--threeImages-ronGuitar-text > a > p {
           color: #ecdbc1;
           font-family: Oswald;
@@ -97,6 +110,9 @@ body {
         position: absolute;
         bottom: 20px;
         left: 7px; }
+        @media only screen and (max-width: 37.5em) {
+          .hero__image--threeImages-train-text {
+            bottom: 9px; } }
         .hero__image--threeImages-train-text > a > p {
           color: #ecdbc1;
           font-family: Oswald;
@@ -110,6 +126,9 @@ body {
         position: absolute;
         bottom: 20px;
         right: 5px; }
+        @media only screen and (max-width: 37.5em) {
+          .hero__image--threeImages-guitar-text {
+            bottom: 9px; } }
         .hero__image--threeImages-guitar-text > a > p {
           color: #ecdbc1;
           font-family: Oswald;
@@ -122,6 +141,9 @@ body {
   border-radius: 25px;
   box-shadow: 0 0 12px #fff;
   width: 100%; }
+  @media only screen and (max-width: 37.5em) {
+    .songLinks img {
+      border-radius: 3px; } }
 
 .songLinks__title {
   font-family: tangerine;
@@ -129,8 +151,16 @@ body {
   font-size: 96px;
   font-weight: 600;
   color: #90c3d3;
-  margin: auto;
+  margin: 90px auto 50px;
   text-align: center; }
+  @media only screen and (max-width: 50em) {
+    .songLinks__title {
+      font-size: 64px;
+      margin: 90px auto 10px; } }
+  @media only screen and (max-width: 37.5em) {
+    .songLinks__title {
+      font-size: 64px;
+      margin-top: 70px auto -20px; } }
 
 .songLinks__images {
   position: relative;
@@ -142,6 +172,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .songLinks__images {
       width: 600px; } }
+  @media only screen and (max-width: 37.5em) {
+    .songLinks__images {
+      width: 385px; } }
   .songLinks__images--ronGuitar {
     position: relative;
     left: 140px;
@@ -155,6 +188,9 @@ body {
         top: auto;
         left: auto;
         margin: 40px auto; } }
+    @media only screen and (max-width: 37.5em) {
+      .songLinks__images--ronGuitar {
+        width: 250px; } }
     .songLinks__images--ronGuitar-text {
       position: absolute;
       bottom: 15px;
@@ -179,6 +215,9 @@ body {
         top: auto;
         left: auto;
         margin: 40px auto; } }
+    @media only screen and (max-width: 37.5em) {
+      .songLinks__images--train {
+        width: 250px; } }
     .songLinks__images--train-text {
       position: absolute;
       bottom: 20px;
@@ -209,6 +248,9 @@ body {
           top: auto;
           left: auto;
           font-size: 24px; } }
+      @media only screen and (max-width: 37.5em) {
+        .songLinks__images--contactText > a {
+          font-size: 24px; } }
   .songLinks__images--guitar {
     position: relative;
     width: 400px;
@@ -222,6 +264,9 @@ body {
         top: auto;
         left: auto;
         margin: 40px auto; } }
+    @media only screen and (max-width: 37.5em) {
+      .songLinks__images--guitar {
+        width: 250px; } }
     .songLinks__images--guitar-text {
       position: absolute;
       text-align: center;

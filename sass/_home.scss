@@ -439,12 +439,13 @@ body {
         @include respond(portrait900) {
             top: 13%;
             left: 10%;
-            width: 80%;
+            width: 40%;
         }
         @include respond(phone) {
             position: static;
             margin: auto;
             padding-top: 50px;
+            width: 267px;
         }
     }
     &__form {

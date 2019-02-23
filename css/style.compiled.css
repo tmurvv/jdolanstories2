@@ -354,8 +354,7 @@ body {
     font-size: 21px;
     border-radius: 7px 7px 0 0; }
   .contact__form--userInputs {
-    padding: 10px;
-    padding-bottom: 20px;
+    padding: 20px 10px;
     line-height: 2;
     background-color: transparent; }
     .contact__form--userInputs div {
@@ -390,6 +389,9 @@ body {
   font-family: 'Josefin Slab', serif;
   font-size: 21px;
   font-weight: 600; }
+  @media only screen and (max-width: 56.25em) {
+    .contact__phone {
+      bottom: 95px; } }
   @media only screen and (max-width: 37.5em) {
     .contact__phone {
       position: static;
@@ -400,4 +402,5 @@ body {
   transform: scale(0.81);
   -webkit-transform: scale(0.81);
   transform-origin: 0 0;
-  -webkit-transform-origin: 0 0; }
+  -webkit-transform-origin: 0 0;
+  right: 0 !important; }

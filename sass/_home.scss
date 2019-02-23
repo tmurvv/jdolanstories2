@@ -513,6 +513,9 @@ body {
         font-size: 21px;
         font-weight: 600;
 
+        @include respond(portrait900) {
+            bottom: 95px;      
+        }
         @include respond(phone) {
             position: static;
             margin: 50px 20%;
@@ -528,5 +531,7 @@ body {
     -webkit-transform:scale(0.81);  
     transform-origin:0 0;
     -webkit-transform-origin:0 0;
+
+    right: 0 !important;
 }
 

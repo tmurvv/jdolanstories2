@@ -90,6 +90,7 @@
     <div class="contact">
         <div class="contact__image">
             <img class="hardImage" src="img/JDolanStories__guitarNeckStylish.jpg" alt="Stylish man with guitar">
+            <div class="homeButton"><a href="index.html">&larr;Back</a></div>           
             <div class="contact__text">
                 <p>J. Dolan Stories provides unique engaging musical programs and/or welcoming ambient background music for events, parties and other occasions. We can make your gathering special!</p>
             </div>                    

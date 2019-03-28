@@ -333,7 +333,7 @@ body {
     .contact__text {
       position: static;
       margin: auto;
-      padding-top: 50px;
+      padding-top: 70px;
       width: 267px; } }
 
 .contact__form {
@@ -404,3 +404,18 @@ body {
   transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
   right: 0 !important; }
+
+.homeButton {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  padding: 7px; }
+  .homeButton > a {
+    font-size: 28px;
+    font-family: 'Josefin Slab', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #79776f; }
+    @media only screen and (max-width: 37.5em) {
+      .homeButton > a {
+        font-size: 20px; } }
